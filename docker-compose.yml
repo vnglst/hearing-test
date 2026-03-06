@@ -1,0 +1,8 @@
+services:
+  hearing-test:
+    image: nginx:alpine
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+    ports:
+      - "80:80"
+    restart: unless-stopped
